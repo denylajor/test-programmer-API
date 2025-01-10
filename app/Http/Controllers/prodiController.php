@@ -106,9 +106,46 @@ class prodiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
-        //
+        try {
+            DB::beginTransaction();
+            $rules = [
+                'nama_prodi' => 'required',
+                'kd_dosen' => 'required',
+            ];
+            $validator = Validator::make($req->all(), $rules);
+
+            if ($validator->fails()) {
+                $msg = [
+                    'responseCode' => 401,
+                    'responseMessage' => $validator->errors()
+                ];
+                return response()->json($msg, 401);
+            } else {
+                $data = [
+                    'nama_prodi' => $req->input('nama_prodi'),
+                    'kd_dosen' => $req->input('kd_dosen'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ];
+
+                prodiModel::where(['kd_prodi' => $id])->update($data);
+                DB::commit();
+                $msg = [
+                    'responseCode' => 200,
+                    'data' => $data,
+                    'responseMessage' => 'Success'
+                ];
+                return response()->json($msg, 200);
+            }
+        } catch (Exception $e) {
+            DB::rollBack();
+            $msg = [
+                'responseCode' => 400,
+                'responseMessage' => $e->getMessage()
+            ];
+            return response()->json($msg, 400);
+        }
     }
 
     /**
@@ -119,6 +156,22 @@ class prodiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            DB::beginTransaction();
+            prodiModel::where(['kd_prodi' => $id])->delete();
+            DB::commit();
+            $msg = [
+                'responseCode' => 200,
+                'responseMessage' => 'Success'
+            ];
+            return response()->json($msg, 200);
+        } catch (Exception $e) {
+            DB::rollBack();
+            $msg = [
+                'responseCode' => 400,
+                'responseMessage' => $e->getMessage()
+            ];
+            return response()->json($msg, 400);
+        }
     }
 }

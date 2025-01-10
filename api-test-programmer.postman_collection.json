@@ -4,9 +4,548 @@
 		"name": "api-test-programmer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "35963298",
-		"_collection_link": "https://programmeritm.postman.co/workspace/398a4da7-f3fd-40a2-85c3-96f58a95c130/collection/35963298-0b52c401-07ac-42e3-ab26-72f34b23ecb8?action=share&source=collection_link&creator=35963298"
+		"_collection_link": "https://programmeritm.postman.co/workspace/Team-Workspace~398a4da7-f3fd-40a2-85c3-96f58a95c130/collection/35963298-0b52c401-07ac-42e3-ab26-72f34b23ecb8?action=share&source=collection_link&creator=35963298"
 	},
 	"item": [
+		{
+			"name": "MAHASISWA",
+			"item": [
+				{
+					"name": "MAHASISWA LIST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/getMahasiswa",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"getMahasiswa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD MAHASISWA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nim",
+									"value": "1001010031",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "SAUL",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "AMBON",
+									"type": "text"
+								},
+								{
+									"key": "kd_prodi",
+									"value": "03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/addMahasiswa",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"addMahasiswa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MAHASISWA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "WAHYUDI",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "SURAKARTA",
+									"type": "text"
+								},
+								{
+									"key": "kd_prodi",
+									"value": "01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/updateMahasiswa/1001010031",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"updateMahasiswa",
+								"1001010031"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MAHASISWA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/delMahasiswa/1001010031",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delMahasiswa",
+								"1001010031"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DOSEN",
+			"item": [
+				{
+					"name": "DOSEN LIST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/getDosen",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"getDosen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD DOSEN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kd_dosen",
+									"value": "000005",
+									"type": "text"
+								},
+								{
+									"key": "nama_dosen",
+									"value": "SAUL PAULUS, M.Psy",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "AMBON",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/addDosen",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"addDosen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE DOSEN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "36|CDiFWAj8am3t5Z7HY0ukSVDYGPrS4rQUED3hSsQc37162198",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_dosen",
+									"value": "SAUL PAULUS, M.Psy",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "SOLO",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/updateDosen/000005",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"updateDosen",
+								"000005"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DOSEN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/delDosen/000005",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delDosen",
+								"000005"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODI",
+			"item": [
+				{
+					"name": "PRODI LIST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/getProdi",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"getProdi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD PRODI",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kd_prodi",
+									"value": "05",
+									"type": "text"
+								},
+								{
+									"key": "nama_prodi",
+									"value": "PSIKOLOG",
+									"type": "text"
+								},
+								{
+									"key": "kd_dosen",
+									"value": "000005",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/addProdi",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"addProdi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PRODI",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_prodi",
+									"value": "SISTEM INFORMASI",
+									"type": "text"
+								},
+								{
+									"key": "kd_dosen",
+									"value": "000001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/updateProdi/05",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"updateProdi",
+								"05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PRODI",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|ZIbujudSunPXGF84mwh2vSxM7AC2ZoWeGaZuaOd59529ebe5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "192.168.20.69:8000/api/v1/delProdi/05",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"69"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delProdi",
+								"05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "REGISTER USER",
 			"request": {
@@ -53,6 +592,16 @@
 		{
 			"name": "LOGIN USER",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "35|muh3CYAQbPKQklpzhrYtcQ30GzgRr0yB0YUMnY0A037be08e",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -83,269 +632,6 @@
 						"api",
 						"v1",
 						"loginUser"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "MAHASISWA LIST",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "28|DT4GsmuDjSKO2nFkTBdlAYHfm1qVstLX1nvyRKJpe765aa55",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/getMahasiswa",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"getMahasiswa"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ADD MAHASISWA",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "29|VgW8c672zSFEWvGJmMKO1dfxoRUzqEr8NV5xsZgI1f9223c8",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "nim",
-							"value": "100101003",
-							"type": "text"
-						},
-						{
-							"key": "nama",
-							"value": "SAUL",
-							"type": "text"
-						},
-						{
-							"key": "alamat",
-							"value": "AMBON",
-							"type": "text"
-						},
-						{
-							"key": "kd_prodi",
-							"value": "03",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/addMahasiswa",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"addMahasiswa"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PRODI LIST",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "29|VgW8c672zSFEWvGJmMKO1dfxoRUzqEr8NV5xsZgI1f9223c8",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/getProdi",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"getProdi"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ADD PRODI",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "30|zWnFjIOA7eKyFqtwuowUi4PmeGn09qpDWr56Kn1Lb8b1bb7d",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "kd_prodi",
-							"value": "05",
-							"type": "text"
-						},
-						{
-							"key": "nama_prodi",
-							"value": "PSIKOLOG",
-							"type": "text"
-						},
-						{
-							"key": "kd_dosen",
-							"value": "000005",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/addProdi",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"addProdi"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DOSEN LIST",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "31|a4DROPLPOM3UOywlibV9yYtuQJ1vwz2SZFFE1KrB93a1904f",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/getDosen",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"getDosen"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ADD DOSEN",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "31|a4DROPLPOM3UOywlibV9yYtuQJ1vwz2SZFFE1KrB93a1904f",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "kd_dosen",
-							"value": "000005",
-							"type": "text"
-						},
-						{
-							"key": "nama_dosen",
-							"value": "SAUL PAULUS, M.Psy",
-							"type": "text"
-						},
-						{
-							"key": "alamat",
-							"value": "AMBON",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "192.168.20.69:8000/api/v1/addDosen",
-					"host": [
-						"192",
-						"168",
-						"20",
-						"69"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"addDosen"
 					]
 				}
 			},

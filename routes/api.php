@@ -46,9 +46,15 @@ Route::post('v1/loginUser', [authController::class, 'loginUser']);
 // --------------------MAHASISWA---------------------
 Route::get('v1/getMahasiswa', [mahasiswaController::class, 'index'])->middleware('auth:sanctum');
 Route::post('v1/addMahasiswa', [mahasiswaController::class, 'store'])->middleware('auth:sanctum');
+Route::patch('v1/updateMahasiswa/{id}', [mahasiswaController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('v1/delMahasiswa/{id}', [mahasiswaController::class, 'destroy'])->middleware('auth:sanctum');
 // --------------------PRODI-------------------------
 Route::get('v1/getProdi', [prodiController::class, 'index'])->middleware('auth:sanctum');
 Route::post('v1/addProdi', [prodiController::class, 'store'])->middleware('auth:sanctum');
+Route::patch('v1/updateProdi/{id}', [prodiController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('v1/delProdi/{id}', [prodiController::class, 'destroy'])->middleware('auth:sanctum');
 // --------------------DOSEN-------------------------
 Route::get('v1/getDosen', [dosenController::class, 'index'])->middleware('auth:sanctum');
 Route::post('v1/addDosen', [dosenController::class, 'store'])->middleware('auth:sanctum');
+Route::patch('v1/updateDosen/{id}', [dosenController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('v1/delDosen/{id}', [dosenController::class, 'destroy'])->middleware('auth:sanctum');
